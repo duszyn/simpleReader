@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements IAsynchronousMess
 // Set base band auto mode, q=1, session=1, flag = 0 flagA
         UHFReader._Config.SetEPCBaseBandParam(255, 0, 1, 0);
 
-        // set ant 1 power to 20dBm
+
         // TODO tutaj dodać edittext z którego będzie brać moc anteny w dBm
         Button confirmB = findViewById(R.id.confirm);
         confirmB.setOnClickListener(v -> {
