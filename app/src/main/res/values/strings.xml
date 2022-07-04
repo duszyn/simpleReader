@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">simpleReader</string>
+    <string name="hint1">Type antenna power in dBm right here.</string>
+    <string name="confirm">Confirm</string>
+</resources>
