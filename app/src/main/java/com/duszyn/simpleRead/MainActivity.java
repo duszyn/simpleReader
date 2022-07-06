@@ -39,15 +39,8 @@ public class MainActivity extends AppCompatActivity implements IAsynchronousMess
         // TODO tutaj dodać edittext z którego będzie brać moc anteny w dBm
         Button confirmB = findViewById(R.id.confirm);
         confirmB.setOnClickListener(v -> {
-            EditText antPower = findViewById(R.id.antPower);
-            String antpowertext = antPower.getText().toString();
-
-
-            System.out.println(antPower.getText().getClass().getSimpleName() + "esia");
-            UHFReader._Config.SetANTPowerParam(1, Integer.parseInt(antpowertext));
-            view = findViewById(R.id.test);
+            Log.e("Power", "Current power is " + UHFReader._Config.GetANTPowerParam());
             //UHFReader._Config.GetANTPowerParam() zwraca -1 (failure)
-            view.setText("current antena power is " +  UHFReader._Config.GetANTPowerParam());
         });
 
     }
@@ -86,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements IAsynchronousMess
         }
 // start reading 6C tags using ant 1 in cycle continuous reading mode
         isReading = UHFReader._Tag6C.GetEPC(1, 1) == 0;
-        view.setText(UHFReader._Tag6C.GetEPC(1,1));
+//        view.setText(UHFReader._Tag6C.GetEPC(1,1));
     }
 
     // stop button onClick handle
